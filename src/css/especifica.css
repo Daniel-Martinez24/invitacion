@@ -1,0 +1,50 @@
+html{
+   text-align: center;
+   background-color: #AF69CC;
+   font-family: cursive;
+}
+
+body{
+	margin: 0%;
+	height: 100%;
+}
+
+h1 {
+    margin: 10vh;
+}
+
+img {
+    width: 80%;
+    border-radius: 50%;
+}
+
+ul {
+    padding: 0%;
+}
+button{
+    font-size:10px;
+    font-family:Verdana,Helvetica;
+    font-weight:bold;
+    color:white;
+    background:#638cb5;
+    border:0px;    
+    width: 50%;
+    height: 4vh;
+    border-radius: 10%;
+}
+
+@media (min-width: 600px) {
+    h1 {
+        margin: 6vh;
+    }
+    
+    img {
+        width: 40%;
+        border-radius: 50%;
+    }
+    button{
+        width: 20%;
+        height: 4vh;
+        border-radius: 10%;
+    }
+  }
