@@ -15,8 +15,9 @@
 
 <body>
     <h1>¿Quieres salir a comer pan conmigo?</h1>
-    <img src = 'https://previews.123rf.com/images/kpixmining/kpixmining1910/kpixmining191000013/131880917-lindo-gatito-jengibre-t%C3%ADmido-gato-dom%C3%A9stico-de-cinco-semanas-felis-silvestris-catus-tierno-gatito-at.jpg'>
-    
+    <img id="cat" src = 'https://previews.123rf.com/images/kpixmining/kpixmining1910/kpixmining191000013/131880917-lindo-gatito-jengibre-t%C3%ADmido-gato-dom%C3%A9stico-de-cinco-semanas-felis-silvestris-catus-tierno-gatito-at.jpg'>
+    <img src="https://i.ibb.co/87fyRLV/entendible.jpg" id="nop_img">
+    <img src="https://c.tenor.com/Y4AzOUrW5GQAAAAd/gato-moviendo-la-cabeza-al-ritmo-de-la-musica.gif" id="sip_img">
     <p>👉👈</p>
     <form action="" id="myForm">
         <ul style="list-style-type:none;">
@@ -44,10 +45,14 @@
         if (res[0].checked)
             {
                 console.log('chi')
+                document.getElementById("sip_img").style.display="inline"
+                document.getElementById("cat").style.display="None"
                 response = 'Chi'
             }
         else if (res[1].checked) {
             console.log('ño')
+            document.getElementById("nop_img").style.display="inline"
+            document.getElementById("cat").style.display="None"
             response = 'ño'
         }
         else {

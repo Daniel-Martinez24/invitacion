@@ -12,9 +12,11 @@ body{
 h1 {
     margin: 10vh;
 }
-
 img {
+
     width: 80%;
+}
+#cat {
     border-radius: 50%;
 }
 
@@ -33,13 +35,22 @@ button{
     border-radius: 10%;
 }
 
+#sip_img {
+    display: none;
+}
+#nop_img {
+    display: none;
+}
 @media (min-width: 600px) {
+    img {
+
+        width: 40%;
+    }
     h1 {
         margin: 6vh;
     }
     
-    img {
-        width: 40%;
+    #cat {
         border-radius: 50%;
     }
     button{
