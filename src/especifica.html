@@ -2,17 +2,73 @@
 <html lang="es">
 <head>
   <meta charset="utf-8">
-  <title>Invita tu ❤️</title>
+  <title>Di que sí porfa</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style/index.css">
+  <link rel="stylesheet" href="css/especifica.css">
   <script src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
   <script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
   <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+
 </head>
 
 <body>
-    <h1>Invita a tu crush/amistad/Pareja/Ligue a salir de manera original</h1>
-    <img src = 'https://m.media-amazon.com/images/M/MV5BYWFjNGNjNTEtN2EwOS00ZTJlLWEzMGEtZGZiMWQ3ZGU0Y2E0XkEyXkFqcGdeQXVyMTMzOTI3Mjg1._V1_.jpg'>
-    <button>Comenzar</button>
+    <h1>¿Quieres salir a comer pan conmigo?</h1>
+    <img src = 'https://previews.123rf.com/images/kpixmining/kpixmining1910/kpixmining191000013/131880917-lindo-gatito-jengibre-t%C3%ADmido-gato-dom%C3%A9stico-de-cinco-semanas-felis-silvestris-catus-tierno-gatito-at.jpg'>
+    <form action="" id="myForm">
+        <ul style="list-style-type:none;">
+            <label id="si">Chi<input type="radio" name="res" value="chi" /></label>
+            <label id="no">Ño<input type="radio" name="res" value="no" /></label>
+        </ul>
+        <button type="submit">Enviar</button>
+        </form>
+    </form>
+    <form method="post">
+      </form>
+      
+
+  <script src=
+  "https://smtpjs.com/v3/smtp.js">
+  </script>
+
+  <script type="module">
+   // code fragment
+    // the form id is myForm
+    $('#myForm').on('submit', function(event) {
+        event.preventDefault(); // prevent reload
+        let res = document.getElementsByName('res')
+        let response = 'Sin seleccionar'
+        if (res[0].checked)
+            {
+                console.log('chi')
+                response = 'Chi'
+            }
+        else if (res[1].checked) {
+            console.log('ño')
+            response = 'ño'
+        }
+        else {
+            alert('selecciona una plis')
+        }
+        
+        var formData = new FormData(this);
+        formData.append('service_id', 'service_sq53ebe');
+        formData.append('template_id', 'template_4pyllbf');
+        formData.append('user_id', 'VK9v8DijRtjYYtQ1Q');
+        $.ajax('https://api.emailjs.com/api/v1.0/email/send-form', {
+            type: 'POST',
+            data: formData,
+            contentType: false, // auto-detection
+            processData: false // no need to parse formData to string
+        }).done(function() {
+            alert('Su mensaje fue enviado por correo electronico !');
+        }).fail(function(error) {
+            alert('Oops... ' + JSON.stringify(error));
+        });
+
+    });
+// code fragment
+  </script>
 </body>
 </html>
